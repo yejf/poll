@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 
+
+1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<!-- 登录 -->
+		<form-bean name="login_form"
+			type="com.tarena.poll.web.forms.LoginForm" />
+		<!-- 调查内容 -->
+		<form-bean name="poll_content_form"
+			type="com.tarena.poll.pm.forms.PollContentForm" />
+		<!-- 班级信息 -->
+		<form-bean name="class_form"
+			type="com.tarena.poll.pm.forms.ClassForm" />
+		<!-- 激活考评 -->
+		<form-bean name="activation_form"
+			type="com.tarena.poll.pm.forms.ActivationForm" />
+		<!-- 统计分析页面 -->
+		<form-bean name="statistics_form"
+			type="com.tarena.poll.pmo.forms.StatisticsForm" />
+		<!-- 修改密码 -->
+		<form-bean name="modifyPasswd_form"
+			type="com.tarena.poll.web.forms.ModifyPasswdForm" />
+		<form-bean name="queryForm"
+			type="com.tarena.poll.pmo.forms.QueryForm">
+		</form-bean>
+		<form-bean name="auditForm"
+			type="com.tarena.poll.pmo.forms.AuditForm">
+		</form-bean>
+	</form-beans>
+	<global-exceptions>
+		<exception key="daoException"
+			type="com.tarena.poll.dao.DaoException" path="/global/error.jsp"
+			scope="request">
+		</exception>
+		<exception key="bizException"
+			type="com.tarena.poll.biz.BizException" path="/global/error.jsp"
+			scope="request">
+		</exception>
+	</global-exceptions>
+	<global-forwards>
+		<forward name="login_fail" path="/admin/index.jsp"></forward>
+	</global-forwards>
+	<action-mappings>
+		<!-- student operation -->
+		<!-- 预加载信息 -->
+		<action path="/pre_poll_content"
+			type="com.tarena.poll.pm.actions.PollAction"
+			parameter="prePollContent">
+			<forward name="pre_poll_content"
+				path="/student/poll_content.jsp">
+			</forward>
+			<forward name="warning" path="/global/warr.jsp"></forward>
+		</action>
+		<!-- 学生提交调查 -->
+		<action path="/poll_submit"
+			type="com.tarena.poll.pm.actions.PollAction" parameter="pollSubmit"
+			name="poll_content_form">
+			<forward name="poll_submit" path="/global/result.jsp">
+			</forward>
+			<forward name="submit_poll_fail" path="/global/warr.jsp" />
+		</action>
+
+		<!-- 登录 -->
+		<action path="/login"
+			type="com.tarena.poll.web.actions.UserAction" parameter="login"
+			name="login_form">
+			<forward name="pm_login_success"
+				path="/pm/class_list.jsp">
+			</forward>
+			<!-- 新增项 -->
+			<forward name="jd_login_success"
+				path="/jdmanager/poll_select_by_pmandclass.jsp">
+			</forward>
+			<!-- 待审核项 -->
+			<forward name="pmo_login_success"
+				path="/pmo/unaudit_list.jsp">
+			</forward>
+		</action>
+		<!-- 退出 -->
+		<action path="/logout"
+			type="com.tarena.poll.web.actions.UserAction" parameter="logout">
+			<forward name="logout" path="/admin/index.jsp"
+				redirect="true">
+			</forward>
+		</action>
+		<!-- PM和PMO修改登录密码 -->
+		<action path="/to_passwd_modify"
+			type="com.tarena.poll.web.actions.UserAction"
+			parameter="toModifyPasswd" name="modifyPasswd_form">
+			<forward name="to_passwd_modify"
+				path="/admin/password_modify.jsp">
+			</forward>
+		</action>
+		<action path="/passwd_modify"
+			type="com.tarena.poll.web.actions.UserAction"
+			parameter="modifyPasswd" name="modifyPasswd_form">
+			<!-- 修改成功之后跳出对话框，等待三秒转到下面的页面,需要增加一个跳转页面,等待三秒 -->
+			<forward name="passwd_modify" path="/admin/jump.jsp"></forward>
+			<!-- 这条路径由小虎加上 -->
+			<forward name="passwd_modify_fail"
+				path="/admin/password_modify.jsp">
+			</forward>
+			<!-- 
+				<forward name="pmo_passwd_modify" path="/pmo/jump.jsp"></forward>
+			-->
+		</action>
+		
+		
+		
+		
+		
+		<!-- PMO 班级类型新增 -->
+		<action path="/to_add_classtype"
+			type="com.tarena.poll.pmo.actions.AuditAction"
+			parameter="toAddClassType">
+			<forward name="to_add_classtype"
+				path="/pmo/add_classtype.jsp">
+			</forward>
+		</action>
+		<action path="/add_classtype"
+			type="com.tarena.poll.pmo.actions.AuditAction"
+			parameter="addClassType">
+			<forward name="add_success"
+				path="/to_add_classtype.do" redirect="true">
+			</forward>
+			<forward name="add_fail"
+				path="/pmo/fail.jsp" redirect="true">
+			</forward>
+		</action>
+		<!-- PMO 教师管理 -->
+		<action path="/to_teacher_manage"
+			type="com.tarena.poll.pmo.actions.AuditAction"
+			parameter="toTeacherManege">
+			<forward name="to_teacher_manage"
+				path="/pmo/teacher_manage.jsp">
+			</forward>
+		</action>
+		<!-- PMO 新增教师 -->
+		<action path="/add_teacher"
+			type="com.tarena.poll.pmo.actions.AuditAction"
+			parameter="addTeacher">
+			<forward name="add_success"
+				path="/to_teacher_manage.do" redirect="true">
+			</forward>
+			
+		</action>
+		<!-- PMO 删除教师 -->
+		<action path="/delete_teacher"
+			type="com.tarena.poll.pmo.actions.AuditAction"
+			parameter="deleteTeacher">
+			<forward name="delete_teacher"
+				path="/pmo/teacher_manage.jsp">
+			</forward>
+		</action>
+		<!-- PMO 考评项管理 -->
+		<action path="/to_content_manage"
+			type="com.tarena.poll.pmo.actions.AuditAction"
+			parameter="toContentManage">
+			<forward name="to_content_manage"
+				path="/pmo/content_manage.jsp">
+			</forward>
+		</action>
+		<!-- PMO 新增考评项 -->
+		<action path="/add_content"
+			type="com.tarena.poll.pmo.actions.AuditAction"
+			parameter="addContent">
+			<forward name="add_content"
+				path="/to_content_manage.do">
+			</forward>
+		</action>
+		<!-- PMO 模板管理 -->
+		<action path="/to_template_manage"
+			type="com.tarena.poll.pmo.actions.AuditAction"
+			parameter="toTemplateManage">
+			<forward name="to_template_manage"
+				path="/pmo/template_manage.jsp">
+			</forward>
+		</action>
+		<!-- PMO 预览模板 -->
+		<action path="/view_template"
+			type="com.tarena.poll.pmo.actions.AuditAction"
+			parameter="viewTemplate">
+			<forward name="view_template"
+				path="/pmo/view_content.jsp">
+			</forward>
+		</action>
+		<!-- PMO 新增模板 -->
+		<action path="/add_template"
+			type="com.tarena.poll.pmo.actions.AuditAction"
+			parameter="addTemplate">
+			<forward name="add_success"
+				path="/pmo/success.jsp">
+			</forward>
+			<forward name="add_fail"
+				path="/pmo/fail.jsp">
+			</forward>
+		</action>
+		
+		
+		
+		
+		
+		
+		<!-- pmo重置密码选项 -->
+		<action path="/to_passwd_reset"
+			type="com.tarena.poll.web.actions.UserAction"
+			parameter="toResetPasswd">
+			<forward name="to_passwd_reset"
+				path="/admin/passwd_reset.jsp">
+			</forward>
+		</action>
+		<action path="/passwd_reset"
+			type="com.tarena.poll.web.actions.UserAction"
+			parameter="resetPasswd">
+			<forward name="passwd_reset"
+				path="/admin/passwd_reset.jsp">
+			</forward>
+		</action>
+
+		<!-- PM operation -->
+		<action path="/jd_activate_list"
+			type="com.tarena.poll.web.actions.UserAction"
+			parameter="afterPasswdModify">
+			<forward name="jd_activate_list"
+				path="/jdmanager/poll_select_by_pmandclass.jsp">
+			</forward>
+		</action>
+		<!-- PM返回首页 -->
+		<action path="/pm_poll_list"
+			type="com.tarena.poll.pm.actions.PollAction"
+			parameter="pollList">
+			<forward name="pm_poll_list" path="/pm/class_list.jsp"></forward>
+		</action>
+		<!-- 为增加班级服务 -->
+		<!-- 新增项 -->
+		<action path="/jdt_class_to_add"
+			type="com.tarena.poll.pm.actions.ClassAction"
+			parameter="jdToAddClass">
+			<forward name="jdt_class_to_add"
+				path="/jdmanager/class_add.jsp">
+			</forward>
+		</action>
+
+		<action path="/pm_class_to_add"
+			type="com.tarena.poll.pm.actions.ClassAction"
+			parameter="toAddClass">
+			<forward name="pm_class_to_add" path="/pm/class_add.jsp"></forward>
+		</action>
+		<!-- 增加班级 -->
+		<action path="/pm_class_add"
+			type="com.tarena.poll.pm.actions.ClassAction" parameter="addClass"
+			name="class_form">
+			<forward name="pm_class_add" path="/pm/class_list.jsp"
+				redirect="true">
+			</forward>
+		</action>
+		<!-- 新增项 -->
+		<action path="/jdt_class_add"
+			type="com.tarena.poll.pm.actions.ClassAction" parameter="jdtAddClass"
+			>
+			<forward name="jdt_class_add"
+				path="/jdmanager/poll_select_by_pmandclass.jsp">
+			</forward>
+			<forward name="jdt_class_to_add"
+				path="/jdmanager/class_add.jsp">
+			</forward>
+		</action>
+		<!-- 为修改班级服务，将班级信息查出 -->
+		<!-- 新增项 -->
+		<action path="/jdt_class_to_modify"
+			type="com.tarena.poll.pm.actions.ClassAction"
+			parameter="jdToModifyClass">
+			<forward name="jdt_class_to_modify"
+				path="/jdmanager/class_modify.jsp">
+			</forward>
+		</action>
+		<action path="/pm_class_to_modify"
+			type="com.tarena.poll.pm.actions.ClassAction"
+			parameter="toModifyClass">
+			<forward name="pm_class_to_modify"
+				path="/jdmanager/class_modify.jsp">
+			</forward>
+		</action>
+		<!-- 修改班级 -->
+		<action path="/pm_class_modify"
+			type="com.tarena.poll.pm.actions.ClassAction" parameter="modifyClass"
+			name="class_form">
+			<forward name="pm_class_modify" path="/pm/class_list.jsp"></forward>
+		</action>
+		<!-- 新增项 -->
+		<action path="/jdt_class_modify"
+			type="com.tarena.poll.pm.actions.ClassAction"
+			parameter="jdtModifyClass">
+			<forward name="jdt_class_modify"
+				path="/jdmanager/poll_select_by_pmandclass.jsp">
+			</forward>
+			<forward name="jdt_class_to_modify"
+				path="/jdmanager/class_modify.jsp">
+			</forward>
+		</action>
+
+		<action path="/jdt_poll_list"
+			type="com.tarena.poll.pm.actions.ClassAction"
+			parameter="backPollList">
+			<forward name="jdt_poll_list"
+				path="/jdmanager/poll_select_by_pmandclass.jsp">
+			</forward>
+		</action>
+
+		<!-- 删除班级
+			<action path="/pm_class_remove"
+			type="com.tarena.poll.pm.actions.ClassAction" parameter="removeClass">
+			<forward name="pm_class_remove" path="/pm/class_list.jsp"></forward>
+			</action>
+		-->
+		<!-- 按班级名称查找班级 -->
+		<action path="/pm_class_query_name"
+			type="com.tarena.poll.pm.actions.ClassAction"
+			parameter="queryClassByName">
+			<forward name="pm_class_query_name"
+				path="/pm/class_list.jsp">
+			</forward>
+		</action>
+
+		<!-- 新增项 -->
+		<!-- 基地帐户增加考评 -->
+		<action path="/jdt_poll_add"
+			type="com.tarena.poll.pm.actions.PollAction" parameter="activatePoll"
+			name="activation_form">
+			<forward name="jdt_poll_add"
+				path="/jdmanager/poll_select_by_pmandclass.jsp">
+			</forward>
+		</action>
+		<action path="/jdt_poll_show"
+			type="com.tarena.poll.pm.actions.PollAction" parameter="showPolls">
+			<forward name="jdt_poll_show"
+				path="/jdmanager/poll_content.jsp">
+			</forward>
+		</action>
+		<!-- 新增项 -->
+		<action path="/jdt_to_close_poll"
+			type="com.tarena.poll.pm.actions.PollAction"
+			parameter="toClosePoll">
+			<forward name="jdt_to_close_poll"
+				path="/jdt_poll_modify.do">
+			</forward>
+		</action>
+		<!-- 关闭考评 -->
+		<action path="/jdt_poll_modify"
+			type="com.tarena.poll.pm.actions.PollAction" parameter="closePoll">
+			<forward name="jdt_poll_modify"
+				path="/jdmanager/poll_select_by_pmandclass.jsp">
+			</forward>
+		</action>
+		<!-- 新增项 -->
+		<action path="/jdt_to_delete_poll"
+			type="com.tarena.poll.pm.actions.PollAction"
+			parameter="toDeletePoll">
+			<forward name="jdt_to_delete_poll"
+				path="/jdt_poll_delete.do">
+			</forward>
+		</action>
+		<!-- 删除考评 -->
+		<action path="/jdt_poll_delete"
+			type="com.tarena.poll.pm.actions.PollAction"
+			parameter="deletePoll">
+			<forward name="jdt_poll_delete"
+				path="/jdmanager/poll_select_by_pmandclass.jsp">
+			</forward>
+		</action>
+		<!-- 激活考评 -->
+		<action path="/pm_poll_activate"
+			type="com.tarena.poll.pm.actions.PollAction" parameter="activatePoll"
+			name="activation_form">
+			<forward name="pm_poll_activate"
+				path="/pm/class_list.jsp">
+			</forward>
+		</action>
+
+		<!-- PMO operation -->
+		<!-- PMO修改密码成功之后跳转的路径 -->
+		<action path="/pmo_unaudit_list"
+			type="com.tarena.poll.pmo.actions.AuditAction"
+			parameter="unauditPollList">
+			<forward name="pmo_unaudit_list"
+				path="/pmo/unaudit_list.jsp">
+			</forward>
+		</action>
+		<!-- 审核调查 -->
+		<action path="/pmo_poll_unaudit"
+			type="com.tarena.poll.pmo.actions.AuditAction"
+			parameter="unauditPollList">
+			<forward name="pmo_poll_unaudit"
+				path="/pmo/unaudit_list.jsp">
+			</forward>
+		</action>
+		<!-- 未审明细 -->
+		<action path="/pmo_poll_detail"
+			type="com.tarena.poll.pmo.actions.AuditAction"
+			parameter="unauditDetail">
+			<forward name="pmo_poll_detail"
+				path="/pmo/unaudit_detail.jsp">
+			</forward>
+			<forward name="pmo_poll_unaudit_fail"
+				path="/global/error.jsp">
+			</forward>
+		</action>
+
+		<!-- 审核 -->
+		<action path="/pmo_poll_audit"
+			type="com.tarena.poll.pmo.actions.AuditAction"
+			parameter="auditPoll" name="auditForm">
+			<forward name="pmo_poll_audit"
+				path="/pmo/unaudit_list.jsp">
+			</forward>
+			<forward name="pmo_poll_audit_fail"
+				path="/global/error.jsp">
+			</forward>
+		</action>
+		<!-- 查看 -->
+		<action path="/pmo_poll_line_detail"
+			type="com.tarena.poll.pmo.actions.AuditAction"
+			parameter="pollLineDetail">
+			<forward name="pmo_poll_line_detail"
+				path="/pmo/poll_line_detail.jsp">
+			</forward>
+		</action>
+		<!-- PM查看某个学生对自己的考评 -->
+		<action path="/pm_poll_line_detail"
+			type="com.tarena.poll.pmo.actions.AuditAction"
+			parameter="pollLineDetail">
+			<forward name="pm_poll_line_detail"
+				path="/pm/poll_line_detail.jsp">
+			</forward>
+		</action>
+
+		<!-- 已审明细 -->
+		<action path="/pmo_poll_audited"
+			type="com.tarena.poll.pmo.actions.AuditAction"
+			parameter="auditedPoll">
+			<forward name="pmo_poll_audited"
+				path="/pmo/audited_detail.jsp">
+			</forward>
+		</action>
+		<!-- 查看明细 -->
+		<action path="/pm_poll_audited"
+			type="com.tarena.poll.pmo.actions.AuditAction"
+			parameter="auditedPoll">
+			<forward name="pm_poll_audited"
+				path="/pm/audited_detail.jsp">
+			</forward>
+		</action>
+
+		<!-- 搜索调查 -->
+		<action path="/pmo_poll_to_query"
+			type="com.tarena.poll.pmo.actions.QueryAction"
+			parameter="toPollQuery">
+			<forward name="pmo_poll_to_query"
+				path="/pmo/poll_list.jsp">
+			</forward>
+		</action>
+		<!-- 搜索按钮 -->
+		<action path="/pmo_poll_query"
+			type="com.tarena.poll.pmo.actions.QueryAction" parameter="pollQuery"
+			name="queryForm">
+			<forward name="pmo_poll_query" path="/pmo/poll_list.jsp"></forward>
+		</action>
+
+
+		<!-- 新增项 -->
+		<action path="/pmo_poll_to_query_m"
+			type="com.tarena.poll.pmo.actions.StatisticsAction"
+			parameter="toQueryByYM">
+			<forward name="pmo_poll_to_query_m"
+				path="/pmo/pm_stat_m_report.jsp">
+			</forward>
+		</action>
+		<!-- 按年月查询 -->
+		<action path="/pmo_poll_query_m"
+			type="com.tarena.poll.pmo.actions.StatisticsAction"
+			parameter="queryResultByYM" name="statistics_form">
+			<forward name="pmo_poll_query_m"
+				path="/pmo/pm_stat_m_report.jsp">
+			</forward>
+		</action>
+
+
+		<!-- 按季度查询 -->
+
+		<!-- 新增项 -->
+		<action path="/pmo_poll_to_query_q"
+			type="com.tarena.poll.pmo.actions.StatisticsAction"
+			parameter="toQueryByQ">
+			<forward name="pmo_poll_to_query_q"
+				path="/pmo/pm_stat_q_report.jsp">
+			</forward>
+		</action>
+		<action path="/pmo_poll_query_q"
+			type="com.tarena.poll.pmo.actions.StatisticsAction"
+			parameter="queryResultByQuarter" name="statistics_form">
+			<forward name="pmo_poll_query_q"
+				path="/pmo/pm_stat_q_report.jsp">
+			</forward>
+		</action>
+		<!-- 按年查询 -->
+
+		<!-- 新增项 -->
+		<action path="/pmo_poll_to_query_y"
+			type="com.tarena.poll.pmo.actions.StatisticsAction"
+			parameter="toQueryByY">
+			<forward name="pmo_poll_to_query_y"
+				path="/pmo/pm_stat_y_report.jsp">
+			</forward>
+		</action>
+		<action path="/pmo_poll_query_y"
+			type="com.tarena.poll.pmo.actions.StatisticsAction"
+			parameter="queryResultByYear" name="statistics_form">
+			<forward name="pmo_poll_query_y"
+				path="/pmo/pm_stat_y_report.jsp">
+			</forward>
+		</action>
+
+	</action-mappings>
+	<message-resources parameter="ApplicationResources" />
+</struts-config>

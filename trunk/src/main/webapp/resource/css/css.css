@@ -1,0 +1,514 @@
+/*.Border[Position][Style][Color] */
+/*宸﹀彸鏈夊搴︿负1鐨勮櫄绾胯竟妗�棰滆壊涓�FFFFFF*/
+.BorderLRDottedWhite {
+	border-top: 1px none #FFFFFF;
+	border-right: 1px dotted #FFFFFF;
+	border-bottom: 1px none #FFFFFF;
+	border-left: 1px dotted #FFFFFF;
+}
+/*涓婁笅鏈夊搴︿负1鐨勮櫄绾胯竟妗�棰滆壊涓�FFFFFF*/
+.BorderTBDottedWhite {
+	border-top: 1px dotted #FFFFFF;
+	border-right: 1px none #FFFFFF;
+	border-bottom: 1px dotted #FFFFFF;
+	border-left: 1px none #FFFFFF;
+}
+/*涓嬫湁瀹藉害涓�鐨勮櫄绾胯竟妗�棰滆壊涓�FFFFFF*/
+.BorderBDottedWhite {
+	border-top: 1px none #FFFFFF;
+	border-right: 1px none #FFFFFF;
+	border-bottom: 1px dotted #FFFFFF;
+	border-left: 1px none #FFFFFF;
+}
+/*宸︽湁瀹藉害涓�鐨勮櫄绾胯竟妗�棰滆壊涓�FFFFFF*/
+.BorderLDottedWhite {
+	border-top: 1px none #FFFFFF;
+	border-right: 1px none #FFFFFF;
+	border-bottom: 1px none #FFFFFF;
+	border-left: 1px dotted #FFFFFF;
+}
+/*鍙虫湁瀹藉害涓�鐨勮櫄绾胯竟妗�棰滆壊涓�FF99CC*/
+.BorderRDottedFF99CC {
+	border-top: 1px none #FF99CC;
+	border-right: 1px dotted #FF99CC;
+	border-bottom: 1px none #FF99CC;
+	border-left: 1px none #FF99CC;
+}
+
+/*涓婁笅鏈夊搴︿负1鐨勫疄绾胯竟妗�棰滆壊涓�FFFFFF*/
+.BorderTBSolidWhite {
+	border-top: 1px solid #FFFFFF;
+	border-right: 1px none #FFFFFF;
+	border-bottom: 1px solid #FFFFFF;
+	border-left: 1px none #FFFFFF;
+}
+/*涓婁笅鏈夊搴︿负1鐨勫疄绾胯竟妗�棰滆壊涓�FF99CC*/
+.BorderTBSolidFF99CC {
+	border-top: 1px solid #FF99CC;
+	border-right: 1px none #FF99CC;
+	border-bottom: 1px solid #FF99CC;
+	border-left: 1px none #FF99CC;
+}
+/*涓嬫湁瀹藉害涓�鐨勫疄绾胯竟妗�棰滆壊涓�FF99CC*/
+.BorderBSolidFF99CC {
+	border-top: 1px none #FF99CC;
+	border-right: 1px none #FF99CC;
+	border-bottom: 1px solid #FF99CC;
+	border-left: 1px none #FF99CC;
+}
+/*涓婁笅宸︽湁瀹藉害涓�鐨勫疄绾胯竟妗�棰滆壊涓�FF99CC*/
+.BorderTBLSolidFF99CC {
+	border-top: 1px solid #FF99CC;
+	border-right: 1px none #FF99CC;
+	border-bottom: 1px solid #FF99CC;
+	border-left: 1px solid #FF99CC;
+}
+/*涓婁笅鍙虫湁瀹藉害涓�鐨勫疄绾胯竟妗�棰滆壊涓�FF99CC*/
+.BorderTBRSolidFF99CC {
+	border-top: 1px solid #FF99CC;
+	border-right: 1px solid #FF99CC;
+	border-bottom: 1px solid #FF99CC;
+	border-left: 1px none #FF99CC;
+}
+/*涓嬪乏鍙虫湁瀹藉害涓�鐨勫疄绾胯竟妗�棰滆壊涓�FF99CC*/
+.BorderBLRSolidFF99CC {
+	border-top: 1px none #FF99CC;
+	border-right: 1px solid #FF99CC;
+	border-bottom: 1px solid #FF99CC;
+	border-left: 1px solid #FF99CC;
+}
+/*宸﹀彸鏈夊搴︿负1鐨勫疄绾胯竟妗�棰滆壊涓�FFFFFF*/
+.BorderLRSolidWhite {
+	border-top: 1px none #FFFFFF;
+	border-right: 1px solid #FFFFFF;
+	border-bottom: 1px none #FFFFFF;
+	border-left: 1px solid #FFFFFF;
+}
+/*鍥涘懆鏈夊搴︿负1鐨勫疄绾胯竟妗�棰滆壊涓�669900*/
+.BorderAllSolid669900 {
+	border: 1px solid #669900;
+}
+/*鍥涘懆鏈夊搴︿负1鐨勫疄绾胯竟妗�棰滆壊涓�FF9900*/
+.BorderAllSolidFF9900 {
+	border: 1px solid #FF9900;
+}
+/*鍥涘懆鏈夊搴︿负1鐨勫疄绾胯竟妗�棰滆壊涓�6699CC*/
+.BorderAllSolid6699CC {
+	border: 1px solid #6699CC;
+}
+/*鍥涘懆鏈夊搴︿负1鐨勫疄绾胯竟妗�棰滆壊涓�FF99CC*/
+.BorderAllSolidFF99CC {
+	border: 1px solid #FF99CC;
+}
+/*涓婂乏鍙虫湁瀹藉害涓�鐨勫疄绾胯竟妗�棰滆壊涓�6699CC*/
+.BorderTLRSolid6699CC {
+	border-top: 1px solid #6699CC;
+	border-right: 1px solid #6699CC;
+	border-bottom: 1px none #6699CC;
+	border-left: 1px solid #6699CC;
+}
+/*涓嬫湁瀹藉害涓�鐨勫疄绾胯竟妗�棰滆壊涓�000000*/
+.BorderBSolidBlack {
+	border-top: 1px none #000000;
+	border-right: 1px none #000000;
+	border-bottom: 1px solid #000000;
+	border-left: 1px none #000000;
+}
+/*鍙虫湁瀹藉害涓�鐨勫疄绾胯竟妗�棰滆壊涓�000000*/
+.BorderRSolidBlack {
+	border-top: 1px none #000000;
+	border-right: 1px solid #000000;
+	border-bottom: 1px none #000000;
+	border-left: 1px none #000000;
+}
+/*鍙虫湁瀹藉害涓�鐨勫疄绾胯竟妗�棰滆壊涓�6699CC*/
+.BorderRSolid6699CC {
+	border-top: 1px none #6699CC;
+	border-right: 1px solid #6699CC;
+	border-bottom: 1px none #6699CC;
+	border-left: 1px none #6699CC;
+}
+/*鍙虫湁瀹藉害涓�鐨勮櫄绾胯竟妗�棰滆壊涓�000000*/
+.BorderRDottedBlack {
+	border-top: 1px none #000000;
+	border-right: 1px dotted #000000;
+	border-bottom: 1px none #000000;
+	border-left: 1px none #000000;
+}
+/*涓嬫湁瀹藉害涓�鐨勮櫄绾胯竟妗�棰滆壊涓�000000*/
+.BorderBDottedBlack {
+	border-top: 1px none #000000;
+	border-right: 1px none #000000;
+	border-bottom: 1px dashed #000000;
+	border-left: 1px none #000000;
+}
+/*涓嬫湁瀹藉害涓�鐨勮櫄绾胯竟妗�棰滆壊涓�6699CC*/
+.BorderBDotted6699CC {
+	border-top: 1px none #6699CC;
+	border-right: 1px none #6699CC;
+	border-bottom: 1px dashed #6699CC;
+	border-left: 1px none #6699CC;
+}
+/*涓婃湁瀹藉害涓�鐨勮櫄绾胯竟妗�棰滆壊涓�6699CC*/
+.BorderTDotted6699CC {
+	border-top: 1px dashed #6699CC;
+	border-right: 1px none #6699CC;
+	border-bottom: 1px none #6699CC;
+	border-left: 1px none #6699CC;
+}
+/*宸﹀彸鏈夊搴︿负1鐨勫疄绾胯竟妗�棰滆壊涓�000000*/
+.BorderLRSolidBlack {
+	border-top: 1px none #000000;
+	border-right: 1px solid #000000;
+	border-bottom: 1px none #000000;
+	border-left: 1px solid #000000;
+}
+/*宸︽湁瀹藉害涓�鐨勫疄绾胯竟妗�棰滆壊涓�000000*/
+.BorderLSolidBlack {
+	border-top: 1px none #000000;
+	border-right: 1px none #000000;
+	border-bottom: 1px none #000000;
+	border-left: 1px solid #000000;
+}
+/*涓婃湁瀹藉害涓�鐨勫疄绾胯竟妗�棰滆壊涓�000000*/
+.BorderTSolidBlack {
+	border-top: 1px solid #000000;
+	border-right: 1px none #000000;
+	border-bottom: 1px none #000000;
+	border-left: 1px none #000000;
+}
+/*涓婃湁瀹藉害涓�鐨勫疄绾胯竟妗�棰滆壊涓�FF99CC*/
+.BorderTSolidFF99CC {
+	border-top: 1px solid #FF99CC;
+	border-right: 1px none #FF99CC;
+	border-bottom: 1px none #FF99CC;
+	border-left: 1px none #FF99CC;
+}
+/*涓婁笅鏈夊搴︿负1鐨勫疄绾胯竟妗�棰滆壊涓�000000*/
+.BorderTBSolidBlack {
+	border-top: 1px solid #000000;
+	border-right: 1px none #000000;
+	border-bottom: 1px solid #000000;
+	border-left: 1px none #000000;
+}
+/*涓婁笅鏈夊搴︿负1鐨勮櫄绾胯竟妗�棰滆壊涓�000000*/
+.BorderTBDottedBlack {
+	border-top: 1px dashed #000000;
+	border-right: 1px none #000000;
+	border-bottom: 1px dashed #000000;
+	border-left: 1px none #000000;
+}
+/*鍥涘懆鏈夊搴︿负1鐨勮櫄绾胯竟妗�棰滆壊涓�000000*/
+.BorderAllDottedBlack {
+	border: 1px dotted #000000;
+}
+/*涓嬫湁瀹藉害涓�鐨勮櫄绾胯竟妗�棰滆壊涓�999999*/
+.BorderBDottedGrey {
+	border-top: 1px none #999999;
+	border-right: 1px none #999999;
+	border-bottom: 1px dashed #999999;
+	border-left: 1px none #999999;
+}
+/*鍥涘懆鏈夊搴︿负1鐨勫疄绾胯竟妗�棰滆壊涓�000000*/
+.BorderAllSolidBlack {
+	border: 1px solid #000000;
+}
+
+/*宸︿笅鏈夊搴︿负1鐨勫疄绾胯竟妗�棰滆壊涓�000000*/
+.BorderLBSolidBlack {
+	border-top: 1px none #000000;
+	border-right: 1px none #000000;
+	border-bottom: 1px solid #000000;
+	border-left: 1px solid #000000;
+}
+
+/* .Alpha[Degree]*/
+/* 浣垮厓绱犻�鏄�閫忔槑搴︿负50% */
+.Alpha50 {
+	filter: Alpha(Opacity=50);
+}
+/* 浣垮厓绱犻�鏄�閫忔槑搴︿负75% */
+.Alpha75 {
+	filter: Alpha(Opacity=75);
+}
+
+/* .Btn[Style][Width]*/
+/* 甯歌娌℃湁鍥剧墖鐨勬寜閽�*/
+.BtnNormal {	
+	FONT-SIZE: 9pt;	
+	line-height : 12px;	
+	BORDER-TOP: black 1px solid;	
+	BORDER-LEFT-WIDTH: 1px;
+	BORDER-LEFT-COLOR: #3D74A8;	
+	BORDER-BOTTOM-WIDTH: 1px;
+	BORDER-BOTTOM-COLOR: #3D74A8;
+	BACKGROUND-COLOR: #C9DCEB;
+	BORDER-RIGHT-WIDTH: 1px;
+	BORDER-RIGHT-COLOR: #3D74A8;
+	BORDER-top-WIDTH: 1px;
+	BORDER-top-COLOR: #3D74A8;
+	padding-top : 2px;
+}
+/* 鏈夊浘鐗囪儗鏅殑鎸夐挳,瀹藉害涓�涓瓧 */
+.BtnLightNormal {
+	height: 20px;
+	width: 57px;
+	border: 1px none #000000;
+	background-image: url(../images/button.gif);
+	font-family: Tahoma, Verdana;
+	font-size: 9pt;
+}
+/* 鏈夊浘鐗囪儗鏅殑鎸夐挳,瀹藉害涓�涓瓧浠ヤ笂 */
+.BtnLightWidth {
+	height: 20px;
+	width: 67px;
+	border: 1px none #000000;
+	background-image: url(../images/buttonWidth.gif);
+	font-family: Tahoma, Verdana;
+	font-size: 9pt;
+}
+
+/* .Font[Style]/[Color]*/
+/* 鍩烘湰瀛椾綋,澶у皬涓�PT */
+.FontBasic {
+	font-family: Tahoma, Verdana;
+	font-size: 9pt;
+}
+/*瀛椾綋棰滆壊涓虹櫧鑹�/
+.FontWhite {
+	color: #FFFFFF;
+}
+/*瀛椾綋棰滆壊涓洪粦鑹�/
+.FontBlack {
+	color: #000000;
+}
+/*瀛椾綋涓虹矖浣�/
+.FontBold {
+	font-weight: bold;
+}
+/* 瓒呴摼鎺ョ殑CSS,鎮仠鏃跺嚭鐜颁笅鍒掔嚎 */
+a.UL:link {
+	color: #FFFFFF;
+	font-family: Tahoma, Verdana;
+	font-size: 9pt;
+	text-decoration: none;
+}
+a.UL:visited {
+	color: #003300;
+	font-family: Tahoma, Verdana;
+	font-size: 9pt;
+	text-decoration: none;
+}
+a.UL:hover {
+	color: #FFFFFF;
+	font-family: Tahoma, Verdana;
+	font-size: 9pt;
+	text-decoration: underline;
+}
+a.UL:active {
+	color: #FFFFFF;
+	font-family: Tahoma, Verdana;
+	font-size: 9pt;
+	text-decoration: none;
+}
+
+/* .Input[BackColor]*/
+/* 杈撳叆妗咺nputBox,鑳屾櫙鑹蹭负#CCCCCC */
+.InputCCCCCC {
+	background-color: #CCCCCC;
+	font-family: Tahoma, Verdana;
+	font-size: 9pt;
+}
+/* 杈撳叆妗咺nputBox,鑳屾櫙鑹蹭负#FFFFFF */
+.InputFFFFFF {
+	background-color: #FFFFFF;
+	font-family: Tahoma, Verdana;
+	font-size: 9pt;
+}
+/* 杈撳叆妗咺nputBox,鑳屾櫙鑹蹭负#c0c0c0 */
+.Inputcolor {
+	background-color: #c0c0c0;
+}
+/* .Txt[Use] */
+/* 鐢ㄤ簬鏈嶅姟鍗忚鐨勬枃鏈,瀹藉害涓�6%*/
+.TxtProtocol {
+	font-family: Tahoma, Verdana;
+	font-size: 9pt;
+	width: 96%;
+}
+
+/* 鐢ㄤ簬闅愯棌鍏冪礌鐨凜SS */
+.Hidden {
+	display: none;
+}
+
+/*鐢ㄤ簬鐨刋TREE鐨凜SS*/
+.webfx-tree-container {
+
+	margin: 0px;
+	padding: 0px;
+	font: icon;
+	white-space: nowrap;
+}
+
+.webfx-tree-item {
+
+	padding: 0px;
+	margin: 0px;
+	font: icon;
+	color: black;
+	white-space: nowrap;
+}
+
+.webfx-tree-item a, .webfx-tree-item a:active, .webfx-tree-item a:hover {
+
+	margin-left: 3px;
+	padding: 1px 2px 1px 2px;
+}
+
+.webfx-tree-item a {
+  	font-size: 8pt;
+	color: #333399;
+	text-decoration: none;
+	font-family: Tahoma, Arial, 瀹嬩綋;
+}
+
+.webfx-tree-item a:hover {
+
+	color: blue;
+	text-decoration: underline;
+}
+
+.webfx-tree-item a:active {
+
+	background: highlight;
+	color: highlighttext;
+	text-decoration: none;
+}
+
+.webfx-tree-item img {
+
+	vertical-align: middle;
+	border: 0px;
+}
+
+.webfx-tree-icon {
+
+	width: 16px;
+	height: 16px;
+}
+/*
+.webfx-tree-item a.selected {
+
+	color: selectedtext;
+	background: selected;
+}
+*/
+
+.webfx-tree-item a.selected-inactive {
+	font-size: 8pt;
+	color: windowtext;
+	background: buttonface;
+}
+/*鍥涘懆鏈夊搴︿负1鐨勫疄绾胯竟妗�棰滆壊涓�3399CC*/
+.BorderAllSolid3399CC {
+	border: 1px solid #3399CC;
+}
+/*鐢ㄤ簬灏忓瓧浣�/
+.FontSmall {
+	font-family: Tahoma, Verdana;
+	font-size: 8pt;
+}
+/*宸﹁竟鏈夊搴︿负1鐨勮櫄绾胯竟妗�棰滆壊涓�000000*/
+.BorderLDottedBlack {
+	border-top: 1px none #000000;
+	border-right: 1px none #000000;
+	border-bottom: 1px none #000000;
+	border-left: 1px dotted #000000;
+}
+
+TD {FONT-SIZE: 9pt; FONT-FAMILY: "Arial, 瀹嬩綋"}
+
+.leftnavlink:link { color: #025FB3;  text-decoration: none }
+.leftnavlink:visited {  color: #025FB3;  text-decoration: none }
+.leftnavlink:active { color: #025FB3;  text-decoration: underline }
+.leftnavlink:hover { color: #025FB3;  text-decoration: underline }
+
+.pagenavlink:link { color: #025FB3;  text-decoration: none }
+.pagenavlink:visited {  color: #025FB3;  text-decoration: none }
+.pagenavlink:active { color: #025FB3;  text-decoration: underline }
+.pagenavlink:hover { color: #025FB3;  text-decoration: underline }
+
+.pagenav1 { color: #025FB3;}
+
+.td1background {background-color: #7575FF;}
+.td2background {background-color: #AAAAFF;}
+.tr1background {background-color: #CACAFF;}
+.td3background {background-color: #000000;}
+.td4background {background-color: #FFFFFF;}
+.pagenav { color: #025FB3; background-color: #AAAAFF; font-size: 12pt; font-weight: bold; }
+
+.fontforwelcometd {font-size:9pt; color:#800080}
+.fontfortd {font-size:9pt; color: #ff0000; }
+.fontfortd1 {font-size:16pt; font-weight: bold;}
+
+.maintitlelink:link { color: #000000;  text-decoration: none }
+.maintitlelink:visited {  color: #000000;  text-decoration: none }
+.maintitlelink:active { color: #000000;  text-decoration: underline }
+.maintitlelink:hover { color: #000000;  text-decoration: underline }
+
+/* add by caohe */
+#messages {
+	color: red;
+	font-size: 150%;
+}
+
+
+.tableHeader {
+	background-color:  #9BA6EC;
+	color: white;
+	font-family:Verdana;
+	font-weight: bold;
+	text-align: center;
+	padding-right: 3px;
+	padding-left: 3px;
+	padding-top: 4;
+	padding-bottom: 4;
+	margin: 0;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-color: white;
+}
+.tableHeader1 {
+	background-color:  #CC99CC;
+	color: #000000;
+	font-family:Verdana;
+	font-weight: bold;
+	text-align: left;
+	font-size:14px;
+	padding-right: 3px;
+	padding-left: 3px;
+	padding-top: 4;
+	padding-bottom: 4;
+	margin: 0;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-color: white;
+}
+.odd {
+	background-color: #FFFFE0;
+	border-bottom: 1px dashed #C7007D;
+}
+.even {
+  	background-color: #FFFFFF;
+}
+
+.txtarea_style {
+	width: 99%;
+	font-size: 12px;
+	font-style: inherit;
+	color: gray;
+}
+.txtarea_style:focus {
+	background-color: #FFFFE0;
+}

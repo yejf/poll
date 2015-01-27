@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<messages>
+	<message id="message">
+		<locale language="en">
+			<entry key="error">对不起，系统出错了</entry>
+			<entry key="warn_class_nobegin">对不起，你所在的班级还没有开始考评</entry>
+			<entry key="warn_resubmit">对不起，你已经评审过了</entry>
+			<entry key="info_over">谢谢您的参与，考评已结束！</entry>
+			<entry key="info_thanks">谢谢您对评审工作的支持！</entry>
+		</locale>
+	</message>
+	
+</messages>

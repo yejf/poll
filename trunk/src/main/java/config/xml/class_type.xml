@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messages>
+ <message id="class_type">
+  <locale language="zh">
+ <!--   <entry key="1">【JAVAEE】大学生实训班</entry>
+   <entry key="2">【Android】大学生实训班</entry>
+   <entry key="3">【UID】大学生实训班</entry>
+   <entry key="4">【嵌入式】大学生实训班</entry> -->
+   
+<!--    <entry key="1">【SPTxxx】大学生实训班</entry>
+   <entry key="2">【SIxxx】学历班</entry>
+   <entry key="3">【STxxx】ISOFT班</entry>
+   <entry key="4">【AY2Txxx】北大青鸟班</entry>
+   <entry key="5">【Other】其它代号</entry> -->
+  
+  </locale>
+ </message>
+</messages> 

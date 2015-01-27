@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messages>
+ <message id="market_content">
+  <locale language="zh">
+   <entry key="1"></entry>
+   <entry key="2"></entry>
+   <entry key="3"></entry>
+   <entry key="4"></entry>
+   <entry key="5"></entry>
+  </locale>
+ </message>
+</messages>

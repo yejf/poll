@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<messages>
+	<message id="mysql">
+		<locale language="en">
+			<!-- <entry key="driver">com.mysql.jdbc.Driver</entry>
+			<entry key="url">jdbc:mysql://localhost:3306/poll</entry>
+			<entry key="user">root</entry>
+			<entry key="passwd">tarena</entry> -->
+			<!-- connection pool relative config -->
+			<entry key="maxActive">20</entry>
+			<entry key="maxWait">5000</entry>
+			<entry key="maxIdle">2</entry>
+		</locale>
+	</message>
+	
+	<message id="oracle">
+		<locale language="en">
+			<entry key="driver">oracle.jdbc.driver.OracleDriver</entry>
+			<entry key="url">jdbc:oracle:thin:@192.168.0.206:1521:tarena</entry>
+			<entry key="user">poll</entry>
+			<entry key="passwd">tarena</entry>
+			<entry key="maxActive">20</entry>
+			<entry key="maxWait">5000</entry>
+			<entry key="maxIdle">2</entry>
+		</locale>
+	</message>
+	
+</messages>

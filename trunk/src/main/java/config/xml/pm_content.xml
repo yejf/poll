@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messages>
+	<!-- 对项目经理 专业技能 的考评项 -->
+	<message id="_skills">
+		<locale language="zh">
+			<!-- 内容 -->
+			<!-- <entry key="1">讲师对所授课程的整体把握程度</entry>
+			<entry key="2">讲师在授课时所做的知识点小结、重点难点总结</entry>
+			<entry key="3">讲师授课准备是否充份</entry>
+			<entry key="4">讲师对解答学员的问题是否到位、易于理解</entry>
+			<entry key="5">对教学充满热情，讲课认真、投入</entry>
+			<entry key="6">讲师有无根据大家的学习情况及时给大家做串讲和集中专题辅导</entry>
+			<entry key="7">在授课过程中，是否条理清晰、易于理解</entry>
+			<entry key="8">是否有关于学习方法方面的辅导</entry>
+			<entry key="9">有无及时、准确地解答大家的疑问和调试程序错误</entry>
+			<entry key="10">有无主动帮助大家发现并解决实现中的问题</entry> -->
+			
+		</locale>
+	</message>
+
+	<!-- 对实训服务的考评项:  -->
+	<message id="_services">
+		<locale language="zh">
+			<!-- <entry key="1">是否有效地进行提升级班学习气氛</entry>
+			<entry key="2">讲师的授课的精神面貌是否积极、主动</entry>
+			<entry key="3">讲师是否有及时对学员的反馈做出积极、正确的回应</entry>
+			<entry key="4">能否经常与大家相互沟通,了解大家的想法、需求</entry>
+			<entry key="5">能否维持良好的班级学习气氛</entry>
+			<entry key="6">严格要求学生，其言传身教有助于学生治学与做人</entry> -->
+			
+		</locale>
+	</message>
+
+	<!-- 其它考评项 -->
+	<message id="_others">
+		<locale language="zh">
+			<!-- <entry key="title">其它</entry>
+			<entry key="1">你对行业职位需求与待遇情况的了解程度</entry>
+			<entry key="2">你对自己未来就业态况的预期</entry>
+			<entry key="3">你对自己就业月薪的期望</entry> -->
+		</locale>
+	</message>
+	
+	<!-- 反馈问题 -->
+	<message id="_questions">
+		<locale language="zh">
+			<!-- <entry key="1">请提出您对老师授课过程的建议</entry>
+			<entry key="2">请提出您对班级管理的合理化建议</entry> -->
+		</locale>
+	</message>
+
+</messages>
+
+
+
+
