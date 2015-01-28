@@ -1,0 +1,1 @@
+mvn install:install-file -Dfile=commons-i18n-1.0.jar -DgroupId=org.apache.commons -DartifactId=commons-i18n -Dversion=1.0 -Dpackaging=jar
